@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="важные, ключевые, слова">
+  <meta name="description" content="краткое описание">
+  <title>Котейка</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slider_css.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header_top">
+        <div class="container">
+          <div class="headet_top-inner">
+            <div class="logo"><a href="#"><img src="images/лого.svg" alt="logo"></a></div>
+            <div class="header_nav">
+              <ul class="nav">
+                <li class="nav_list"><a href="index.html#pochemuMi">Почему мы? </a></li>
+                <li class="nav_list"><a href="nomera.html">Номера </a></li>
+                <li class="nav_list"><a href="index.html#reviews">Отзывы </a></li>
+                <li class="nav_list"><a href="index.html#map">Как нас найти</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="filtr">
+        <div class="container">
+          <div class="filtr-inner">
+            <!-- Заголовок и сортировка (селектолр) -->
+            <div class="filtr_heading">
+              <div class="heading heading-filtr">Наши номера</div>
+              <select class="filtr_heading-sortirowka" name="sort">
+                <option value="plB"><img src="images/filtr/sort/Vector 8.svg" alt="">По площади</option>
+                <option value="plM"><img src="images/filtr/sort/Vector 82.svg" alt="">По площади</option>
+                <option value="cB"><img src="images/filtr/sort/Vector 8.svg" alt="">По цене</option>
+                <option value="cM"><img src="images/filtr/sort/Vector 82.svg" alt="">По цене</option>
+              </select>
+            </div>
+            <!-- тело в котором параметры и грид -->
+            <div class="filtr_body">
+              <!-- параметры -->
+              <div class="filtr_body_parametr">
+                <p>Цена за сутки, ₽</p>
+                <input type="number" placeholder="от 100" type="number" min="100" max="600">
+                <input type="number" placeholder="до 600" type="number" min="100" max="600">
+
+
+                <p>Площадь</p>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  0,63 м2
+                </label>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  0,90 м2
+                </label>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  1,13 м2
+                </label>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  1,56 м2
+                </label>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  2,56 м2
+                </label>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  2,88 м2
+                </label>
+
+                <p class="filtr_body_parametr-fix_p">Оснащение номера</p>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  Пустой номер
+                </label>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  Лежак
+                </label>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  Когтеточка
+                </label>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  Игровой-комплекс
+                </label>
+                <label>
+                  <input type="checkbox" class="fake_ch" checked>
+                  <span class="real_ch">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  Домик
+                </label>
+
+
+                <a href="#" class="knopka knopka-param">Сбросить фильтр</a>
+              </div>
+
+
+              <!-- грид -->
+              <div class="filtr_body_grid">
+                <!-- 1 -->
+                <div class="filtr_body_grid_item">
+                  <img src="images/filtr/content/1.jpg" alt="">
+                  <div class="filtr_body_grid_item_inner">
+                    <div class="filtr_body_grid_item-heading">Эконом</div>
+                    <ul class="filtr_body_grid_item-ul">
+                      <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 90х70х180 см</li>
+                      <li class="filtr_body_grid_item-li">Площадь - 0,63 м2</li>
+                      <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
+                        <div class="filtr_body_grid_item-li_flex-img">
+                          <img src="images/filtr/icons/pusto.svg" alt="">
+                        </div>
+                      </li>
+                      <li class="filtr_body_grid_item-li">Цена за сутки: <span>100₽</span></li>
+                    </ul>
+                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                  </div>
+                </div>
+                <!-- 2 -->
+                <div class="filtr_body_grid_item">
+                  <img src="images/filtr/content/2.jpg" alt="">
+                  <div class="filtr_body_grid_item_inner">
+                    <div class="filtr_body_grid_item-heading">Эконом плюс</div>
+                    <ul class="filtr_body_grid_item-ul">
+                      <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 90х100х180 см</li>
+                      <li class="filtr_body_grid_item-li">Площадь - 0,90 м2</li>
+                      <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
+                        <div class="filtr_body_grid_item-li_flex-img">
+                          <img src="images/filtr/icons/1.svg" alt="">
+                          <img src="images/filtr/icons/2.svg" alt="">
+                        </div>
+                      </li>
+                      <li class="filtr_body_grid_item-li">Цена за сутки: <span>200₽</span></li>
+                    </ul>
+                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                  </div>
+                </div>
+                <!-- 3 -->
+                <div class="filtr_body_grid_item">
+                  <img src="images/filtr/content/3.jpg" alt="">
+                  <div class="filtr_body_grid_item_inner">
+                    <div class="filtr_body_grid_item-heading">Комфорт</div>
+                    <ul class="filtr_body_grid_item-ul">
+                      <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 100х125х180 см</li>
+                      <li class="filtr_body_grid_item-li">Площадь - 1,13 м2</li>
+                      <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
+                        <div class="filtr_body_grid_item-li_flex-img">
+                          <img src="images/filtr/icons/1.svg" alt="">
+                          <img src="images/filtr/icons/2.svg" alt="">
+                          <img src="images/filtr/icons/3.svg" alt="">
+                        </div>
+                      </li>
+                      <li class="filtr_body_grid_item-li">Цена за сутки: <span>250₽</span></li>
+                    </ul>
+                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                  </div>
+                </div>
+                <!-- 4 -->
+                <div class="filtr_body_grid_item">
+                  <img src="images/filtr/content/4.jpg" alt="">
+                  <div class="filtr_body_grid_item_inner">
+                    <div class="filtr_body_grid_item-heading">Сьют</div>
+                    <ul class="filtr_body_grid_item-ul">
+                      <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 125х125х180 см</li>
+                      <li class="filtr_body_grid_item-li">Площадь - 1,56 м2</li>
+                      <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
+                        <div class="filtr_body_grid_item-li_flex-img">
+                          <img src="images/filtr/icons/1.svg" alt="">
+                          <img src="images/filtr/icons/2.svg" alt="">
+                          <img src="images/filtr/icons/3.svg" alt="">
+                        </div>
+                      </li>
+                      <li class="filtr_body_grid_item-li">Цена за сутки: <span>350₽</span></li>
+                    </ul>
+                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                  </div>
+                </div>
+                <!-- 5 -->
+                <div class="filtr_body_grid_item">
+                  <img src="images/filtr/content/5.jpg" alt="">
+                  <div class="filtr_body_grid_item_inner">
+                    <div class="filtr_body_grid_item-heading">Люкс</div>
+                    <ul class="filtr_body_grid_item-ul">
+                      <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 160х160х180 см</li>
+                      <li class="filtr_body_grid_item-li">Площадь - 2,56 м2</li>
+                      <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
+                        <div class="filtr_body_grid_item-li_flex-img">
+                          <img src="images/filtr/icons/1.svg" alt="">
+                          <img src="images/filtr/icons/2.svg" alt="">
+                          <img src="images/filtr/icons/3.svg" alt="">
+                          <img src="images/filtr/icons/4.svg" alt="">
+                        </div>
+                      </li>
+                      <li class="filtr_body_grid_item-li">Цена за сутки: <span>500₽</span></li>
+                    </ul>
+                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                  </div>
+                </div>
+                <!-- 6 -->
+                <div class="filtr_body_grid_item">
+                  <img src="images/filtr/content/6.jpg" alt="">
+                  <div class="filtr_body_grid_item_inner">
+                    <div class="filtr_body_grid_item-heading">Супер-Люкс</div>
+                    <ul class="filtr_body_grid_item-ul">
+                      <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 180х160х180 см</li>
+                      <li class="filtr_body_grid_item-li">Площадь - 2,88 м2</li>
+                      <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
+                        <div class="filtr_body_grid_item-li_flex-img">
+                          <img src="images/filtr/icons/1.svg" alt="">
+                          <img src="images/filtr/icons/2.svg" alt="">
+                          <img src="images/filtr/icons/3.svg" alt="">
+                          <img src="images/filtr/icons/4.svg" alt="">
+                        </div>
+                      </li>
+                      <li class="filtr_body_grid_item-li">Цена за сутки: <span>600₽</span></li>
+                    </ul>
+                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="aside">
+        <div class="container">
+          <div class="aside-inner">
+            <div class="aside_inner-item">
+              <div class="aside-h1">Каждый 7-й день</div>
+              <div class="aside-h2">бесплатно!</div>
+              <div class="aside-p">Акция действует при размещении
+                в номерах “Люкс” и “Супер-Люкс” </div>
+              <a href="#" class="knopka oboi_knopka">Забронировать</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="map" id="map">
+        <div class="container">
+          <div class="map-inner">
+            <div class="map_text">
+              <div class="heading heading_map">Как нас найти</div>
+              <div class="map_text_fake">
+                <div class="map_text_heading-mini">Адрес</div>
+                <div class="map_text_p">Санкт-Петербург,
+                  ул Большая Конюшенная, д 19</div>
+
+                <div class="map_text_heading-mini">Режим работы</div>
+                <div class="map_text_p">Ежедневно, с 9:00 до 20:00</div>
+
+                <div class="map_text_heading-mini">Телефон</div>
+                <div class="map_text_p">8 (800) 333-55-99</div>
+
+                <div class="map_text_heading-mini">E-mail</div>
+                <div class="map_text_p">info@cat-hotel.ru</div>
+
+                <div class="map_text_heading-mini">Социальные сети</div>
+                <ul class="map_text_ul">
+                  <a href="#" class="map_text_ul_li">
+                    <li><img src="images/icons/1.svg" alt=""></li>
+                  </a>
+                  <a href="#" class="map_text_ul_li">
+                    <li><img src="images/icons/2.svg" alt=""></li>
+                  </a>
+                  <a href="#" class="map_text_ul_li">
+                    <li><img src="images/icons/3.svg" alt=""></li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map_script">
+          <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa5fc6bd078cab195d13f2b5de5ab427fbbad69decf371b7829a983c50aaca92b&amp;width=800&amp;height=580&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="header_top">
+          <div class="container">
+            <div class="container-footer">
+              <div class="headet_top-inner">
+                <div class="logo"><a href="#"><img src="images/лого.svg" alt="logo"></a></div>
+                <div class="header_nav">
+                  <ul class="nav">
+                    <li class="nav_list"><a href="index.html#pochemuMi">Почему мы? </a></li>
+                    <li class="nav_list"><a href="nomera.html">Номера </a></li>
+                    <li class="nav_list"><a href="index.html#reviews">Отзывы </a></li>
+                    <li class="nav_list"><a href="index.html#map">Как нас найти</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="linia"></div>
+        <div class="footer_bottom">
+          <div class="container">
+            <div class="container-footer">
+              <div class="footer_bottom-inner">
+                <div class="footer_bottom-p"><img src="images/main/c.svg" alt="">2019 Все права
+                  защищены</div>
+                <div class="footer_bottom-p">Политика конфиденциальности</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/slick-1.8.1/slick/slick.min.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

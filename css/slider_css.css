@@ -1,0 +1,180 @@
+/* Слайдер */
+.slick-slider {}
+
+/* Слайдер запущений */
+.slick-slider.slick-initialized {}
+
+/* Слайдер з крапками */
+.slick-slider.slick-dotted {}
+
+/* Обмежувальна оболонка */
+.slick-list {
+}
+
+/* Стрічка слайдів */
+.slick-track {
+  display: flex;
+}
+
+/* Слайд */
+.slick-slide {}
+
+/* Слайд активний (показується) */
+.slick-slide.slick-active {}
+
+/* Слайд основний */
+.slick-slide.slick-current {}
+
+/* Слайд по центру */
+.slick-slide.slick-center {}
+
+/* Клонований слайд */
+.slick-slide.slick-cloned {}
+
+/* Стрілка */
+.slick-arrow {}
+
+/* Стрілка вліво */
+.slick-arrow.slick-prev {}
+
+/* Стрілка вправо */
+.slick-arrow.slick-next {}
+
+/* Стрілка не активна */
+.slick-arrow.slick-disabled {}
+
+/* Точки (буліти) */
+.slick-dots {}
+
+.slick-dots li {}
+
+/* Активна точка */
+.slick-dots li.slick-active {}
+
+/* Елемент точки */
+.slick-dots li button {}
+
+
+.nomera_slider .slick-list {
+  overflow: hidden;
+}
+
+.nomera_slider .slick-arrow {
+  position: absolute;
+  bottom: -10px;
+  /* ширина и высота стрелок */
+  width: 60px;
+  height: 60px;
+
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(173, 152, 143, 0.25);
+  border-radius: 50%;
+}
+
+/* назад */
+.nomera_slider .slick-arrow.slick-prev {
+  right: 80px;
+  font-size: 0px;
+  background: url("/images/slider/left.svg")0 0 / 100% no-repeat;
+}
+
+/* вперед */
+.nomera_slider .slick-arrow.slick-next {
+  right: 0px;
+  font-size: 0px;
+  background: url("/images/slider/right.svg") 0 0 / 100% no-repeat;
+}
+
+/* точечки ---------------------------------------------------------------------------------------------------------------------------------*/
+
+.nomera_slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 55px;
+}
+
+.nomera_slider .slick-dots li {
+  margin-right: 12px;
+}
+
+/* Активна точка */
+.nomera_slider .slick-dots li.slick-active button {
+  background-color: #FAC663;
+  font-size: 0px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Елемент точки */
+.nomera_slider .slick-dots li button {
+  font-size: 0px;
+  width: 12px;
+  height: 12px;
+  background-color: #E1E1E1;
+  border-radius: 50%;
+}
+
+
+
+/* ОТЗЫВЫ=========================================================================================================================================================== */
+
+
+
+.reviews_slider .slick-arrow {
+  position: absolute;
+  bottom: -10px;
+  /* ширина и высота стрелок */
+  width: 60px;
+  height: 60px;
+
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(173, 152, 143, 0.25);
+  border-radius: 50%;
+}
+
+/* назад */
+.reviews_slider .slick-arrow.slick-prev {
+  right: 80px;
+  font-size: 0px;
+  background: url("/images/slider/left.svg")0 0 / 100% no-repeat;
+}
+
+/* вперед */
+.reviews_slider .slick-arrow.slick-next {
+  right: 0px;
+  font-size: 0px;
+  background: url("/images/slider/right.svg") 0 0 / 100% no-repeat;
+}
+
+/* точечки ---------------------------------------------------------------------------------------------------------------------------------*/
+
+.reviews_slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 55px;
+}
+
+.reviews_slider .slick-dots li {
+  margin-right: 12px;
+}
+
+/* Активна точка */
+.reviews_slider .slick-dots li.slick-active button {
+  background-color: #FAC663;
+  font-size: 0px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Елемент точки */
+.reviews_slider .slick-dots li button {
+  font-size: 0px;
+  width: 12px;
+  height: 12px;
+  background-color: #E1E1E1;
+  border-radius: 50%;
+}
