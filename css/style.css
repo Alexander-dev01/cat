@@ -692,7 +692,7 @@ body {
 }
 
 .aside-inner {
-    background: url("/images/filtr/aside.jpg") no-repeat center;
+    background: url("images/filtr/aside.jpg") no-repeat center;
     border-radius: 10px;
     overflow: hidden;
     width: 1170px;
