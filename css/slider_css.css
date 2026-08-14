@@ -1,59 +1,7 @@
-/* Слайдер */
-.slick-slider {}
 
-/* Слайдер запущений */
-.slick-slider.slick-initialized {}
-
-/* Слайдер з крапками */
-.slick-slider.slick-dotted {}
-
-/* Обмежувальна оболонка */
-.slick-list {
-}
-
-/* Стрічка слайдів */
 .slick-track {
   display: flex;
 }
-
-/* Слайд */
-.slick-slide {}
-
-/* Слайд активний (показується) */
-.slick-slide.slick-active {}
-
-/* Слайд основний */
-.slick-slide.slick-current {}
-
-/* Слайд по центру */
-.slick-slide.slick-center {}
-
-/* Клонований слайд */
-.slick-slide.slick-cloned {}
-
-/* Стрілка */
-.slick-arrow {}
-
-/* Стрілка вліво */
-.slick-arrow.slick-prev {}
-
-/* Стрілка вправо */
-.slick-arrow.slick-next {}
-
-/* Стрілка не активна */
-.slick-arrow.slick-disabled {}
-
-/* Точки (буліти) */
-.slick-dots {}
-
-.slick-dots li {}
-
-/* Активна точка */
-.slick-dots li.slick-active {}
-
-/* Елемент точки */
-.slick-dots li button {}
-
 
 .nomera_slider .slick-list {
   overflow: hidden;
@@ -75,14 +23,14 @@
 .nomera_slider .slick-arrow.slick-prev {
   right: 80px;
   font-size: 0px;
-  background: url("/images/slider/left.svg")0 0 / 100% no-repeat;
+  background: url("images/slider/left.svg")0 0 / 100% no-repeat;
 }
 
 /* вперед */
 .nomera_slider .slick-arrow.slick-next {
   right: 0px;
   font-size: 0px;
-  background: url("/images/slider/right.svg") 0 0 / 100% no-repeat;
+  background: url("images/slider/right.svg") 0 0 / 100% no-repeat;
 }
 
 /* точечки ---------------------------------------------------------------------------------------------------------------------------------*/
@@ -138,14 +86,14 @@
 .reviews_slider .slick-arrow.slick-prev {
   right: 80px;
   font-size: 0px;
-  background: url("/images/slider/left.svg")0 0 / 100% no-repeat;
+  background: url("images/slider/left.svg")0 0 / 100% no-repeat;
 }
 
 /* вперед */
 .reviews_slider .slick-arrow.slick-next {
   right: 0px;
   font-size: 0px;
-  background: url("/images/slider/right.svg") 0 0 / 100% no-repeat;
+  background: url("images/slider/right.svg") 0 0 / 100% no-repeat;
 }
 
 /* точечки ---------------------------------------------------------------------------------------------------------------------------------*/
