@@ -8,7 +8,8 @@
   <title>Котейка</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/globalStyle.css">
+  <link rel="stylesheet" href="css/nomera.css">
   <link rel="stylesheet" href="css/slider_css.css">
 
 </head>
@@ -39,138 +40,144 @@
             <!-- Заголовок и сортировка (селектолр) -->
             <div class="filtr_heading">
               <div class="heading heading-filtr">Наши номера</div>
-              <select class="filtr_heading-sortirowka" name="sort">
-                <option value="plB"><img src="images/filtr/sort/Vector 8.svg" alt="">По площади</option>
-                <option value="plM"><img src="images/filtr/sort/Vector 82.svg" alt="">По площади</option>
-                <option value="cB"><img src="images/filtr/sort/Vector 8.svg" alt="">По цене</option>
-                <option value="cM"><img src="images/filtr/sort/Vector 82.svg" alt="">По цене</option>
+              <select class="filtr_heading-sortirowka">
+                <option value="plB">↑ По площади</option>
+                <option value="plM">↓ По площади</option>
+                <option value="cB">↑ По цене</option>
+                <option value="cM">↓ По цене</option>
               </select>
             </div>
             <!-- тело в котором параметры и грид -->
             <div class="filtr_body">
               <!-- параметры -->
               <div class="filtr_body_parametr">
-                <p>Цена за сутки, ₽</p>
-                <input type="number" placeholder="от 100" type="number" min="100" max="600">
-                <input type="number" placeholder="до 600" type="number" min="100" max="600">
+                <div class="filtr_price">
+                  <p>Цена за сутки, ₽</p>
+                  <input type="number" placeholder="от 100" type="number" min="100" max="600">
+                  <input type="number" placeholder="до 600" type="number" min="100" max="600">
+                </div>
+
+                <div class="filtr_square">
+                  <p>Площадь</p>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    0,63 м2
+                  </label>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    0,90 м2
+                  </label>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    1,13 м2
+                  </label>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    1,56 м2
+                  </label>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    2,56 м2
+                  </label>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    2,88 м2
+                  </label>
+                </div>
+
+                <div class="filtr_equipment">
+                  <p>Оснащение номера</p>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    Пустой номер
+                  </label>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    Лежак
+                  </label>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    Когтеточка
+                  </label>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    Игровой-комплекс
+                  </label>
+                  <label>
+                    <input type="checkbox" class="fake_ch" checked>
+                    <span class="real_ch">
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    Домик
+                  </label>
+                </div>
 
 
-                <p>Площадь</p>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  0,63 м2
-                </label>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  0,90 м2
-                </label>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  1,13 м2
-                </label>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  1,56 м2
-                </label>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  2,56 м2
-                </label>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  2,88 м2
-                </label>
-
-                <p class="filtr_body_parametr-fix_p">Оснащение номера</p>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  Пустой номер
-                </label>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  Лежак
-                </label>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  Когтеточка
-                </label>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  Игровой-комплекс
-                </label>
-                <label>
-                  <input type="checkbox" class="fake_ch" checked>
-                  <span class="real_ch">
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  Домик
-                </label>
-
-
-                <a href="#" class="knopka knopka-param">Сбросить фильтр</a>
+                <button class="knopka knopka-prim">Применить</button>
+                <button class="knopka knopka-param">Сбросить фильтр</button>
               </div>
 
 
@@ -185,7 +192,7 @@
                       <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 90х70х180 см</li>
                       <li class="filtr_body_grid_item-li">Площадь - 0,63 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
-                        <div class="filtr_body_grid_item-li_flex-img">
+                        <div class="filtr_body_grid_item-li_flex-img" data-js-none>
                           <img src="images/filtr/icons/pusto.svg" alt="">
                         </div>
                       </li>
@@ -203,7 +210,7 @@
                       <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 90х100х180 см</li>
                       <li class="filtr_body_grid_item-li">Площадь - 0,90 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
-                        <div class="filtr_body_grid_item-li_flex-img">
+                        <div class="filtr_body_grid_item-li_flex-img" data-js-gamingComplex>
                           <img src="images/filtr/icons/1.svg" alt="">
                           <img src="images/filtr/icons/2.svg" alt="">
                         </div>
@@ -222,7 +229,7 @@
                       <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 100х125х180 см</li>
                       <li class="filtr_body_grid_item-li">Площадь - 1,13 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
-                        <div class="filtr_body_grid_item-li_flex-img">
+                        <div class="filtr_body_grid_item-li_flex-img" data-js-gamingComplex>
                           <img src="images/filtr/icons/1.svg" alt="">
                           <img src="images/filtr/icons/2.svg" alt="">
                           <img src="images/filtr/icons/3.svg" alt="">
@@ -242,7 +249,7 @@
                       <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 125х125х180 см</li>
                       <li class="filtr_body_grid_item-li">Площадь - 1,56 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
-                        <div class="filtr_body_grid_item-li_flex-img">
+                        <div class="filtr_body_grid_item-li_flex-img" data-js-gamingComplex>
                           <img src="images/filtr/icons/1.svg" alt="">
                           <img src="images/filtr/icons/2.svg" alt="">
                           <img src="images/filtr/icons/3.svg" alt="">
@@ -262,7 +269,7 @@
                       <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 160х160х180 см</li>
                       <li class="filtr_body_grid_item-li">Площадь - 2,56 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
-                        <div class="filtr_body_grid_item-li_flex-img">
+                        <div class="filtr_body_grid_item-li_flex-img" data-js-gamingComplex>
                           <img src="images/filtr/icons/1.svg" alt="">
                           <img src="images/filtr/icons/2.svg" alt="">
                           <img src="images/filtr/icons/3.svg" alt="">
@@ -283,7 +290,7 @@
                       <li class="filtr_body_grid_item-li">Размеры (ШхГхВ) - 180х160х180 см</li>
                       <li class="filtr_body_grid_item-li">Площадь - 2,88 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
-                        <div class="filtr_body_grid_item-li_flex-img">
+                        <div class="filtr_body_grid_item-li_flex-img" data-js-gamingComplex>
                           <img src="images/filtr/icons/1.svg" alt="">
                           <img src="images/filtr/icons/2.svg" alt="">
                           <img src="images/filtr/icons/3.svg" alt="">
@@ -390,6 +397,7 @@
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/slick-1.8.1/slick/slick.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/title_castom.js"></script>
 
 </body>
 

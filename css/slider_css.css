@@ -23,14 +23,14 @@
 .nomera_slider .slick-arrow.slick-prev {
   right: 80px;
   font-size: 0px;
-  background: url("images/slider/left.svg")0 0 / 100% no-repeat;
+  background: url("../images/slider/left.svg")0 0 / 100% no-repeat;
 }
 
 /* вперед */
 .nomera_slider .slick-arrow.slick-next {
   right: 0px;
   font-size: 0px;
-  background: url("images/slider/right.svg") 0 0 / 100% no-repeat;
+  background: url("../images/slider/right.svg") 0 0 / 100% no-repeat;
 }
 
 /* точечки ---------------------------------------------------------------------------------------------------------------------------------*/
@@ -86,14 +86,14 @@
 .reviews_slider .slick-arrow.slick-prev {
   right: 80px;
   font-size: 0px;
-  background: url("images/slider/left.svg")0 0 / 100% no-repeat;
+  background: url("../images/slider/left.svg")0 0 / 100% no-repeat;
 }
 
 /* вперед */
 .reviews_slider .slick-arrow.slick-next {
   right: 0px;
   font-size: 0px;
-  background: url("images/slider/right.svg") 0 0 / 100% no-repeat;
+  background: url("../images/slider/right.svg") 0 0 / 100% no-repeat;
 }
 
 /* точечки ---------------------------------------------------------------------------------------------------------------------------------*/
