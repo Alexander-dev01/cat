@@ -1,0 +1,89 @@
+.nomer {
+  margin-bottom: 140px;
+  margin-top: 70px;
+  position: relative;
+}
+
+.nomer-inner::before {
+  content: '';
+  background-image: url('../images/background/lapa3.svg');
+  width: 230px;
+  height: 234px;
+
+  position: absolute;
+  right: 100px;
+  top: -30px;
+  z-index: -1;
+}
+
+.nomer-inner {
+  display: flex;
+}
+
+.images_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.image-item {
+  filter: opacity(50%);
+  width: 70px;
+  height: 112px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.image-item-active{
+  filter: none;
+}
+
+.nomer_image {
+  margin-right: 70px;
+}
+
+.nomer_image img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+
+}
+
+.nomer_description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Lato-Regular', sans-serif;
+  font-size: 16px;
+}
+
+.description_h {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-size: 36px;
+}
+
+.descriprion_p-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.descriprion_p {}
+
+.description_ul {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.descriprion_li img {
+  margin-right: 8px;
+}
+
+.description_price {
+  font-family: 'Lato-Medium', sans-serif;
+  font-size: 18px;
+}
+

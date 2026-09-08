@@ -52,20 +52,6 @@
     margin-bottom: 40px;
 }
 
-.oboi_knopka::after {
-    content: "";
-    position: absolute;
-
-    width: 36px;
-    height: 36px;
-
-    /* центрирует по вертикали кнопку  */
-    top: 50%;
-    transform: translateY(-50%);
-
-    right: 7px;
-    background: url("../images/lapa_button.svg") no-repeat center;
-}
 
 /* pochemuMi=============================================================================================================================== */
 
@@ -124,112 +110,6 @@
 
 .pochemuMi_setka-inner-p {
     line-height: 140%;
-}
-
-/* nomera=============================================================================================================================== */
-
-.nomera {
-    margin-bottom: 140px;
-}
-
-.nomera-inner {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.nomera-inner::before {
-    content: "";
-    position: absolute;
-
-    width: 484px;
-    height: 151px;
-
-    left: -160px;
-    top: 31px;
-
-    opacity: 20%;
-    background: url("../images/background/riba.svg") no-repeat center;
-
-    z-index: -1;
-}
-
-
-/* сам слайдер */
-.nomera_slider {
-    position: relative;
-    margin-bottom: 43px;
-
-}
-
-.nomera_slider-slide {
-    display: flex;
-    align-items: center;
-}
-
-.slide_image {
-    border-radius: 10px;
-    width: 600px;
-    height: 404px;
-}
-
-.slide-content {
-    display: flex;
-    flex-direction: column;
-
-    padding: 40px 100px;
-    background-color: #fff;
-    box-shadow: 0 0 25px 0 rgba(208, 208, 208, 0.25);
-    border-radius: 8px;
-
-    margin-left: -70px;
-    margin-right: 140px;
-    width: 500px;
-
-}
-
-.slide-content-h {
-    font-family: "Rubik-Medium", sans-serif;
-    font-size: 22px;
-    margin-bottom: 30px;
-}
-
-.slide-content-item {
-    margin-bottom: 20px;
-    display: flex;
-}
-
-.slide-content-item:last-child {
-    margin-bottom: 30px;
-}
-
-/* кружочек */
-.slide-content-item span {
-    width: 13px;
-    height: 13px;
-    background-color: #FAC663;
-    border-radius: 50%;
-    margin-right: 8px;
-}
-
-.slide-content-knopka {
-    background-color: #FF7236;
-    color: rgb(255, 255, 255);
-}
-
-.slide-content-knopka::after {
-    content: "";
-    position: absolute;
-
-    width: 36px;
-    height: 36px;
-
-    /* центрирует по вертикали кнопку  */
-    top: 50%;
-    transform: translateY(-50%);
-
-    right: 7px;
-    background: url("../images/lapa_button2.svg") no-repeat center;
 }
 
 

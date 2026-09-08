@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/globalStyle.css">
   <link rel="stylesheet" href="css/nomera.css">
   <link rel="stylesheet" href="css/slider_css.css">
+  <link rel="stylesheet" href="css/utils.css">
 
 </head>
 
@@ -50,17 +51,17 @@
             <!-- тело в котором параметры и грид -->
             <div class="filtr_body">
               <!-- параметры -->
-              <div class="filtr_body_parametr">
+              <form class="filtr_body_parametr" id="form_filtr">
                 <div class="filtr_price">
                   <p>Цена за сутки, ₽</p>
-                  <input type="number" placeholder="от 100" type="number" min="100" max="600">
-                  <input type="number" placeholder="до 600" type="number" min="100" max="600">
+                  <input type="number" placeholder="от 100" type="number" min="100" max="600" name="minPrice" required>
+                  <input type="number" placeholder="до 600" type="number" min="100" max="600" name="maxPrice" required>
                 </div>
 
                 <div class="filtr_square">
                   <p>Площадь</p>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="0,63">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -70,7 +71,7 @@
                     0,63 м2
                   </label>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="0,90">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -80,7 +81,7 @@
                     0,90 м2
                   </label>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="1,13">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -90,7 +91,7 @@
                     1,13 м2
                   </label>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="1,56">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -100,7 +101,7 @@
                     1,56 м2
                   </label>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="2,56">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -110,7 +111,7 @@
                     2,56 м2
                   </label>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="2,88">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -124,7 +125,7 @@
                 <div class="filtr_equipment">
                   <p>Оснащение номера</p>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="noneNomer">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -134,7 +135,7 @@
                     Пустой номер
                   </label>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="lezak">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -144,7 +145,7 @@
                     Лежак
                   </label>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="kogtetochka">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -154,7 +155,7 @@
                     Когтеточка
                   </label>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="gameComplex">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -164,7 +165,7 @@
                     Игровой-комплекс
                   </label>
                   <label>
-                    <input type="checkbox" class="fake_ch" checked>
+                    <input type="checkbox" class="fake_ch" checked value="domik">
                     <span class="real_ch">
                       <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 3.25L4.46154 7L10 1" stroke="#141312" stroke-linecap="round"
@@ -176,16 +177,16 @@
                 </div>
 
 
-                <button class="knopka knopka-prim">Применить</button>
-                <button class="knopka knopka-param">Сбросить фильтр</button>
-              </div>
+                <button class="knopka knopka-prim" type="submit">Применить</button>
+                <button class="knopka knopka-param" data-js-sbros-parametrow type="button">Сбросить фильтр</button>
+              </form>
 
 
               <!-- грид -->
               <div class="filtr_body_grid">
                 <!-- 1 -->
-                <div class="filtr_body_grid_item">
-                  <img src="images/filtr/content/1.jpg" alt="">
+                <div class="filtr_body_grid_item" data-js-price="100" data-js-ploshad="0,63" data-js-osnashenie="noneNomer">
+                  <a href="page_cat.html" data-js-page="1"> <img src="images/filtr/content/1.jpg" alt=""></a>
                   <div class="filtr_body_grid_item_inner">
                     <div class="filtr_body_grid_item-heading">Эконом</div>
                     <ul class="filtr_body_grid_item-ul">
@@ -198,12 +199,13 @@
                       </li>
                       <li class="filtr_body_grid_item-li">Цена за сутки: <span>100₽</span></li>
                     </ul>
-                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                    <button class="knopka filter-knopka">Забронировать</button>
                   </div>
                 </div>
                 <!-- 2 -->
-                <div class="filtr_body_grid_item">
-                  <img src="images/filtr/content/2.jpg" alt="">
+                <div class="filtr_body_grid_item" data-js-price="200" data-js-ploshad="0,90"
+                  data-js-osnashenie="lezak,kogtetochka">
+                  <a href="page_cat.html" data-js-page="2"><img src="images/filtr/content/2.jpg" alt=""></a>
                   <div class="filtr_body_grid_item_inner">
                     <div class="filtr_body_grid_item-heading">Эконом плюс</div>
                     <ul class="filtr_body_grid_item-ul">
@@ -211,18 +213,19 @@
                       <li class="filtr_body_grid_item-li">Площадь - 0,90 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
                         <div class="filtr_body_grid_item-li_flex-img" data-js-gamingComplex>
-                          <img src="images/filtr/icons/1.svg" alt="">
-                          <img src="images/filtr/icons/2.svg" alt="">
+                          <img src="images/filtr/icons/lezak.svg" alt="">
+                          <img src="images/filtr/icons/kogtetochka.svg" alt="">
                         </div>
                       </li>
                       <li class="filtr_body_grid_item-li">Цена за сутки: <span>200₽</span></li>
                     </ul>
-                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                    <button class="knopka filter-knopka">Забронировать</button>
                   </div>
                 </div>
                 <!-- 3 -->
-                <div class="filtr_body_grid_item">
-                  <img src="images/filtr/content/3.jpg" alt="">
+                <div class="filtr_body_grid_item" data-js-price="250" data-js-ploshad="1,13"
+                  data-js-osnashenie="lezak,kogtetochka,gameComplex">
+                  <a href="page_cat.html" data-js-page="3"><img src="images/filtr/content/3.jpg" alt=""></a>
                   <div class="filtr_body_grid_item_inner">
                     <div class="filtr_body_grid_item-heading">Комфорт</div>
                     <ul class="filtr_body_grid_item-ul">
@@ -230,19 +233,20 @@
                       <li class="filtr_body_grid_item-li">Площадь - 1,13 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
                         <div class="filtr_body_grid_item-li_flex-img" data-js-gamingComplex>
-                          <img src="images/filtr/icons/1.svg" alt="">
-                          <img src="images/filtr/icons/2.svg" alt="">
-                          <img src="images/filtr/icons/3.svg" alt="">
+                          <img src="images/filtr/icons/lezak.svg" alt="">
+                          <img src="images/filtr/icons/kogtetochka.svg" alt="">
+                          <img src="images/filtr/icons/gameComplex.svg" alt="">
                         </div>
                       </li>
                       <li class="filtr_body_grid_item-li">Цена за сутки: <span>250₽</span></li>
                     </ul>
-                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                    <button class="knopka filter-knopka">Забронировать</button>
                   </div>
                 </div>
                 <!-- 4 -->
-                <div class="filtr_body_grid_item">
-                  <img src="images/filtr/content/4.jpg" alt="">
+                <div class="filtr_body_grid_item" data-js-price="350" data-js-ploshad="1,56"
+                  data-js-osnashenie="lezak,kogtetochka,gameComplex">
+                  <a href="page_cat.html" data-js-page="4"> <img src="images/filtr/content/4.jpg" alt=""></a>
                   <div class="filtr_body_grid_item_inner">
                     <div class="filtr_body_grid_item-heading">Сьют</div>
                     <ul class="filtr_body_grid_item-ul">
@@ -250,19 +254,20 @@
                       <li class="filtr_body_grid_item-li">Площадь - 1,56 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
                         <div class="filtr_body_grid_item-li_flex-img" data-js-gamingComplex>
-                          <img src="images/filtr/icons/1.svg" alt="">
-                          <img src="images/filtr/icons/2.svg" alt="">
-                          <img src="images/filtr/icons/3.svg" alt="">
+                          <img src="images/filtr/icons/lezak.svg" alt="">
+                          <img src="images/filtr/icons/kogtetochka.svg" alt="">
+                          <img src="images/filtr/icons/gameComplex.svg" alt="">
                         </div>
                       </li>
                       <li class="filtr_body_grid_item-li">Цена за сутки: <span>350₽</span></li>
                     </ul>
-                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                    <button class="knopka filter-knopka">Забронировать</button>
                   </div>
                 </div>
                 <!-- 5 -->
-                <div class="filtr_body_grid_item">
-                  <img src="images/filtr/content/5.jpg" alt="">
+                <div class="filtr_body_grid_item" data-js-price="500" data-js-ploshad="2,56"
+                  data-js-osnashenie="lezak,kogtetochka,gameComplex,domik">
+                  <a href="page_cat.html" data-js-page="5"><img src="images/filtr/content/5.jpg" alt=""></a>
                   <div class="filtr_body_grid_item_inner">
                     <div class="filtr_body_grid_item-heading">Люкс</div>
                     <ul class="filtr_body_grid_item-ul">
@@ -270,20 +275,21 @@
                       <li class="filtr_body_grid_item-li">Площадь - 2,56 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
                         <div class="filtr_body_grid_item-li_flex-img" data-js-gamingComplex>
-                          <img src="images/filtr/icons/1.svg" alt="">
-                          <img src="images/filtr/icons/2.svg" alt="">
-                          <img src="images/filtr/icons/3.svg" alt="">
-                          <img src="images/filtr/icons/4.svg" alt="">
+                          <img src="images/filtr/icons/lezak.svg" alt="">
+                          <img src="images/filtr/icons/kogtetochka.svg" alt="">
+                          <img src="images/filtr/icons/gameComplex.svg" alt="">
+                          <img src="images/filtr/icons/domik.svg" alt="">
                         </div>
                       </li>
                       <li class="filtr_body_grid_item-li">Цена за сутки: <span>500₽</span></li>
                     </ul>
-                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                    <button class="knopka filter-knopka">Забронировать</button>
                   </div>
                 </div>
                 <!-- 6 -->
-                <div class="filtr_body_grid_item">
-                  <img src="images/filtr/content/6.jpg" alt="">
+                <div class="filtr_body_grid_item" data-js-price="600" data-js-ploshad="2,88"
+                  data-js-osnashenie="lezak,kogtetochka,gameComplex,domik">
+                  <a href="page_cat.html" data-js-page="6"><img src="images/filtr/content/6.jpg" alt=""></a>
                   <div class="filtr_body_grid_item_inner">
                     <div class="filtr_body_grid_item-heading">Супер-Люкс</div>
                     <ul class="filtr_body_grid_item-ul">
@@ -291,15 +297,15 @@
                       <li class="filtr_body_grid_item-li">Площадь - 2,88 м2</li>
                       <li class="filtr_body_grid_item-li filtr_body_grid_item-li_flex">Оснащение номера
                         <div class="filtr_body_grid_item-li_flex-img" data-js-gamingComplex>
-                          <img src="images/filtr/icons/1.svg" alt="">
-                          <img src="images/filtr/icons/2.svg" alt="">
-                          <img src="images/filtr/icons/3.svg" alt="">
-                          <img src="images/filtr/icons/4.svg" alt="">
+                          <img src="images/filtr/icons/lezak.svg" alt="">
+                          <img src="images/filtr/icons/kogtetochka.svg" alt="">
+                          <img src="images/filtr/icons/gameComplex.svg" alt="">
+                          <img src="images/filtr/icons/domik.svg" alt="">
                         </div>
                       </li>
                       <li class="filtr_body_grid_item-li">Цена за сутки: <span>600₽</span></li>
                     </ul>
-                    <a href="#" class="knopka filter-knopka">Забронировать</a>
+                    <button class="knopka filter-knopka">Забронировать</button>
                   </div>
                 </div>
               </div>
@@ -315,7 +321,7 @@
               <div class="aside-h2">бесплатно!</div>
               <div class="aside-p">Акция действует при размещении
                 в номерах “Люкс” и “Супер-Люкс” </div>
-              <a href="#" class="knopka oboi_knopka">Забронировать</a>
+              <button href="#" class="knopka oboi_knopka">Забронировать</button>
             </div>
           </div>
         </div>
@@ -398,6 +404,7 @@
   <script src="js/slick-1.8.1/slick/slick.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/title_castom.js"></script>
+  <script src="js/filtr_form.js"></script>
 
 </body>
 
