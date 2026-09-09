@@ -5,6 +5,7 @@ class FiltrForm {
       filtrSquare: '.filtr_square',
       filtrEquipment: '.filtr_equipment',
       sbros: '[data-js-sbros-parametrow]',
+      selectSortirowka: '[data-js-sortirowka]',
     }
     this.initialization()
     this.bindEvent()
@@ -22,13 +23,12 @@ class FiltrForm {
     this.elementFiltrSquare = document.querySelector(this.selectors.filtrSquare)
     this.elementFiltrEquipment = document.querySelector(this.selectors.filtrEquipment)
     this.elementSbros = document.querySelector(this.selectors.sbros)
+    this.elementSelectSortirowka = document.querySelector(this.selectors.selectSortirowka)
   }
 
   onSubmit(event) {
     const { target } = event
     this.getDataForm(target)
-    console.log('state', this.state);
-
     new FiltrLogic(this.state)
   }
 
@@ -73,7 +73,11 @@ class FiltrForm {
     osnashenieNew.forEach((element) => { element.checked = true })
 
     this.state.osnashenie = []
-    console.log('state сброс', this.state);
+  }
+
+  sortirowka() {
+    new FiltrLogic(null, this.elementSelectSortirowka)
+
   }
 
   bindEvent() {
@@ -84,6 +88,7 @@ class FiltrForm {
     this.elementSbros.addEventListener('click', () => {
       this.sbrosChecked()
     })
+    this.elementSelectSortirowka.addEventListener('change', () => { this.sortirowka() })
   }
 }
 new FiltrForm()
@@ -91,20 +96,68 @@ new FiltrForm()
 
 
 class FiltrLogic {
-  constructor(statte) {
+  constructor(statte, elementSelect) {
     this.selectors = {
       gridParent: '.filtr_body_grid',
     }
     this.state = { ...statte }
     this.initialization()
-    this.magic()
+    statte ? this.magic() : ''
+    elementSelect ? this.sortirowkaGetData(elementSelect) : ''
   }
 
   initialization() {
     this.elementGridParent = document.querySelector(this.selectors.gridParent)
   }
 
+  sortirowkaGetData(elementSelect) {
+    const { value } = elementSelect
+
+    // сортировка по select
+    // создаю объекты (дети грида) в массив
+    this.gridElements = []
+    // заполняю массив
+    Array.from(this.elementGridParent.children).forEach((element) => {
+      const objPPO = this.getDataInput(element)
+      const objForArray = {
+        objPPO: objPPO,
+        elementHTML: element,
+      }
+      this.gridElements.push(objForArray)
+    })
+    this.sortirowkaLogic(value)
+
+  }
+
+  sortirowkaLogic(value) {
+    this.gridElements.sort((a, b) => {
+      const ploshadA = Number(a.objPPO.ploshad.replace(',', '.'))
+      const ploshadB = Number(b.objPPO.ploshad.replace(',', '.'))
+      const priceA = Number(a.objPPO.price)
+      const priceB = Number(b.objPPO.price)
+
+      switch (value) {
+        case 'plB':
+          return ploshadA - ploshadB
+        case 'plM':
+          return ploshadB - ploshadA
+        case 'cB':
+          return priceA - priceB
+        case 'cM':
+          return priceB - priceA
+        default:
+          return 0
+      }
+    })
+
+    this.gridElements.forEach((element) => {
+      this.elementGridParent.append(element.elementHTML)
+    })
+
+  }
+
   magic() {
+    // фильтрация по форме
     Array.from(this.elementGridParent.children).forEach((element) => {
       const objPPO = this.getDataInput(element)
       let srawnenieOk = true
@@ -113,13 +166,9 @@ class FiltrLogic {
           srawnenieOk = false
         }
       })
-      element.classList.remove('visually-hidden')
-      if (!srawnenieOk) {
-        element.classList.add('visually-hidden')
-      }
-
-      console.log('srawnenieOk() на этом объекте', srawnenieOk);
+      element.classList.toggle('visually-hidden', !srawnenieOk)
     })
+
 
   }
 
@@ -149,7 +198,5 @@ class FiltrLogic {
     const osnashenie = element.dataset.jsOsnashenie
     return { price, ploshad, osnashenie }
   }
-  
+
 }
-
-
