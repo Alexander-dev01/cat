@@ -1,45 +1,41 @@
 class TitleCastom {
   constructor() {
+    this.selectors = {
+      osnashenie: '[data-js-osnashenie-img]',
+      filtr: '.filtr_body_grid',
+      titleCastom: '.title_castom',
+    }
+    this.initialization()
     this.bindEvent()
   }
 
-  selectors = {
-    none: '[data-js-none]',
-    gamingComplex: '[data-js-gamingComplex]',
-  }
 
   state = {
     text: '',
     elementHTML: null,
-    nameElement: '',
   }
 
-  mouseenter(event) {
-    const gamingElement = event.target.closest(this.selectors.gamingComplex)
-    const noneElement = event.target.closest(this.selectors.none)
-    if (!gamingElement && !noneElement) { return }
+  initialization() {
+    this.elementFiltrParent = document.querySelector(this.selectors.filtr)
+  }
 
-    if (gamingElement) {
-      this.state.text = 'Игровой комплекс'
-      this.state.nameElement = 'gaming'
-    }
-    if (noneElement) {
-      this.state.text = 'Пустой номер'
-      this.state.nameElement = 'none'
-    }
-    this.state.elementHTML = gamingElement ?? noneElement
+  pointerover(event) {
+    const matches = event.target.closest(this.selectors.osnashenie)
+    if (!matches) { return }
+
+    const valueOsnashenie = matches.dataset.jsOsnashenieImg
+    this.state.text = valueOsnashenie
+    this.state.elementHTML = matches
+
+    console.log('навелся');
+
     this.titleAdd()
-
   }
 
   titleAdd() {
-    console.log('state', this.state);
-    const isElementInArray = this.state.elementHTML.querySelector('.title_castom')
+    this.deleteDiv()
 
-
-    if (isElementInArray) {
-      isElementInArray.remove()
-    }
+    this.state.elementHTML.style.position = 'relative'
 
     const divCreate = document.createElement('div')
     divCreate.classList.add('title_castom')
@@ -47,39 +43,33 @@ class TitleCastom {
 
     this.state.elementHTML.append(divCreate)
 
+
     setTimeout(() => {
       divCreate.classList.add('beauty')
     }, 100)
 
   }
 
-  mouseleave(event) {
-    console.log('event.target', event.target);
-
-    const isElementInArray = this.state.elementHTML.querySelectorAll('.title_castom')
-    if (isElementInArray) {
-      isElementInArray.forEach(element => {
-        element.classList.remove('beauty')
-        setTimeout(() => {
-          element.remove()
-
-        }, 300)
-      });
-    }
-  }
-
-  titleDelete() {
+  deleteDiv() {
+    const da = this.state.elementHTML.querySelectorAll(this.selectors.titleCastom)
+    if (!da) { return }
+    Array.from(da).forEach((element) => {
+      element.classList.remove('beauty')
+      setTimeout(() => {
+        element.remove()
+      }, 300)
+    })
 
   }
 
   bindEvent() {
-    const elementsGaming = document.querySelectorAll(`${this.selectors.gamingComplex}, ${this.selectors.none}`)
-    elementsGaming.forEach((element) => {
-      element.addEventListener('mouseenter', (event) => { this.mouseenter(event) })
-      element.addEventListener('mouseleave', (event) => { this.mouseleave(event) })
+    this.elementFiltrParent.addEventListener('pointerover', (event) => {
+      this.pointerover(event)
+    })
+    this.elementFiltrParent.addEventListener('pointerout', (event) => {
+      this.deleteDiv(event)
     })
 
   }
 }
-
 new TitleCastom()
