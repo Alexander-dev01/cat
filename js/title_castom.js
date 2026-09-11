@@ -26,9 +26,6 @@ class TitleCastom {
     const valueOsnashenie = matches.dataset.jsOsnashenieImg
     this.state.text = valueOsnashenie
     this.state.elementHTML = matches
-
-    console.log('навелся');
-
     this.titleAdd()
   }
 
@@ -40,9 +37,7 @@ class TitleCastom {
     const divCreate = document.createElement('div')
     divCreate.classList.add('title_castom')
     divCreate.textContent = this.state.text
-
     this.state.elementHTML.append(divCreate)
-
 
     setTimeout(() => {
       divCreate.classList.add('beauty')
@@ -51,8 +46,8 @@ class TitleCastom {
   }
 
   deleteDiv() {
+    if (!this.state.elementHTML){return}
     const da = this.state.elementHTML.querySelectorAll(this.selectors.titleCastom)
-    if (!da) { return }
     Array.from(da).forEach((element) => {
       element.classList.remove('beauty')
       setTimeout(() => {

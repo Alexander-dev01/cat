@@ -54,7 +54,7 @@
 .nomer_description {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  justify-content: space-between;
   font-family: 'Lato-Regular', sans-serif;
   font-size: 16px;
 }
