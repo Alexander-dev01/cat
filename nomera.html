@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/nomera.css">
   <link rel="stylesheet" href="css/slider_css.css">
   <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/windowDialog.css">
+
 
 </head>
 
@@ -35,6 +37,51 @@
       </div>
     </header>
     <main>
+         <section class="window_input visually-hidden">
+                <div class="window_input_background">
+                    <div class="window">
+                        <div class="headingKrestik">
+                            <div class="heading heading_window">Забронировать номер</div>
+                            <button type="button" class="krestik">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L17 17M17 1L1 17" stroke="#1A212F" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <form id="asdasd">
+                            <div class="inputs_norm">
+                                <input class="input_window" type="text" placeholder="Ваше имя">
+                                <input class="input_window" type="text" placeholder="Имя Питомца">
+                                <input class="input_window" type="tel" placeholder="Телефон">
+                                <input class="input_window" type="email" placeholder="E-mail">
+                            </div>
+                            <div class="inputs_minMax">
+                                Дата заезда с <input type="date" class="input_window-date" placeholder="26.01.2020"> по
+                                <input type="date" class="input_window-date" placeholder="26.02.2020">
+                            </div>
+                            <button class="knopka filter-knopka knopka-submit" type="button">Отправить заявку</button>
+                        </form>
+                    </div>
+                    <div class="window_submit-ok visually-hidden">
+                        <div class="window-ok">
+                            <div class="headingKrestik headingKrestik-ok">
+                                <div class="heading heading_window">Спасибо за заявку!</div>
+                                <button type="button" class="krestik">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L17 17M17 1L1 17" stroke="#1A212F" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="window-ok-text">Мы свяжемся с вами в ближайшее время</p>
+                            <button class="knopka filter-knopka knopka-submit" type="button">Ок</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
       <section class="filtr">
         <div class="container">
           <div class="filtr-inner">
@@ -370,7 +417,7 @@
         </div>
 
       </section>
-      <!-- <section class="map" id="map">
+      <section class="map" id="map">
         <div class="container">
           <div class="map-inner">
             <div class="map_text">
@@ -409,7 +456,7 @@
           <script type="text/javascript" charset="utf-8" async
             src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa5fc6bd078cab195d13f2b5de5ab427fbbad69decf371b7829a983c50aaca92b&amp;width=800&amp;height=580&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
-      </section> -->
+      </section>
       <footer class="footer">
         <div class="header_top">
           <div class="container">
@@ -449,6 +496,7 @@
   <script src="js/title_castom.js"></script>
   <script src="js/filtr_form.js"></script>
   <script src="js/newNomer.js"></script>
+  <script src="js/submitForm.js"></script>
 
 </body>
 

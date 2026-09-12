@@ -55,6 +55,31 @@ body {
     background: url("../images/lapa_button.svg") no-repeat center;
 }
 
+
+.filter-knopka {
+    background-color: #FF7236;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+.filter-knopka::after {
+    content: "";
+    position: absolute;
+
+    width: 36px;
+    height: 36px;
+
+    /* центрирует по вертикали кнопку  */
+    top: 50%;
+    transform: translateY(-50%);
+
+    right: 7px;
+    background: url("../images/lapa_button2.svg") no-repeat center;
+}
+
+
 .heading {
     font-family: "Rubik-Bold", sans-serif;
     font-size: 36px;
