@@ -131,14 +131,14 @@ body {
 
 .map-inner {
     display: flex;
-    justify-self: start;
+    margin: 0 auto;
 }
 
 .map_text {
     display: flex;
     flex-direction: column;
     width: 470px;
-    margin-left: 100px;
+    padding: 0px 15px;
 }
 
 .heading_map {
@@ -171,7 +171,8 @@ body {
 
 .map_script {
     display: flex;
-    justify-content: end;
+    width: 800px;
+    height: 580px;
 }
 
 
@@ -243,9 +244,13 @@ body {
 }
 
 .slide_image {
-    border-radius: 10px;
     width: 600px;
     height: 404px;
+}
+
+.slide_image img {
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .slide-content {
@@ -305,4 +310,51 @@ body {
 
     right: 7px;
     background: url("../images/lapa_button2.svg") no-repeat center;
+}
+
+
+/* adaptiv =============================================================================================================================== */
+
+@media(max-width:768px) {
+    .container {
+        max-width: 723px;
+        padding: 0 45px;
+    }
+
+
+    .slide_image {
+        width: 442px;
+        height: 326px;
+    }
+
+    .slide_image img {
+        width: 442px;
+        height: 326px;
+    }
+
+    .slide-content {
+        display: flex;
+        flex-direction: column;
+
+        padding: 40px;
+
+        margin-left: -110px;
+        margin-right: 45px;
+
+    }
+
+    .map_text {
+        width: 369px;
+        padding:0 45px;
+    }
+
+    .map_script {
+        display: flex;
+        width: 399px;
+    }
+
+    .container-footer{
+        padding: 0px;
+    }
+
 }

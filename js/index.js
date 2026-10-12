@@ -9,7 +9,7 @@
 
       waitForAnimate: false,
 
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 1500,
       pauseOnHover:true,
       pauseOnDotsHover:true,
@@ -20,12 +20,12 @@
       infinite: false,
       arrows:true,
       dots: true,
-      slidesToShow: 2,
+      slidesToShow: 1,
       slidesToScroll: 1,
 
       waitForAnimate: false,
 
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 1500,
       pauseOnHover:true,
       pauseOnDotsHover:true,
